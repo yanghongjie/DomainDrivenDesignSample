@@ -11,7 +11,7 @@ namespace Domain.Commands.Handlers
 
         public async Task Handle(BuildOrder command)
         {
-            await DoHandle(async c => { await OrderService.OrderBuild(command.ToOrder()); }, command);
+            await DoHandle(async c => { await OrderService.OrderBuild(c.ToOrder()); }, command);
         }
     }
 }
